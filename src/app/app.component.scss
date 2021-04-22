@@ -1,0 +1,25 @@
+
+
+
+
+.test-app-comp{
+  padding: 0;
+  margin: 777px;
+}
+
+.users{
+  display: flex;
+  justify-content: space-around;
+}
+app-user-table,
+app-user-list {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+}
+app-user-list {
+  border: 2px solid green;
+}
+app-user-table {
+  border: 2px solid red;
+}

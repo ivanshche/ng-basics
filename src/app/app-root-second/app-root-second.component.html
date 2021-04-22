@@ -1,0 +1,44 @@
+<div class="root2">
+
+<p>app-root-second works!</p>
+  <i>Angular (урок 5)</i>
+<h2>{{text}}</h2>
+here hide title:
+<h3 [hidden]="!text2">
+  welcome to {{text2}}
+</h3>
+<hr>
+  <div><i>Angular (урок 6)</i></div>
+
+  <input
+  [(ngModel)]="text"
+  type="text">
+<hr>
+  <div><i>Angular (урок 7)</i></div>
+  <button (click)="onBtnClick()">Click meee</button>
+</div>
+<span><i>Angular (урок 8) - директивы (Directives)</i></span>
+<table>
+  <tr>
+    <th>First name:</th>
+    <th>Last name:</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.fn | uppercase}}</td>
+    <td>{{user.ln}}</td>
+  </tr>
+</table>
+<br>
+<hr>
+<i>Angular (урок 9) - трубы (pipes, built-in pipes)</i>
+<h3>date: {{birthday | date}}</h3>
+<h3>date dd/MM/yyyy: {{birthday | date:'dd/MM/yyyy'}}</h3>
+<!--<h3>number: {{birthday | number}}</h3>-->
+<!--<h3>decimal: {{birthday | decimal}}</h3>-->
+<h3>json: {{users | json}}</h3>
+<!--<h3>{{birthday | slice}}</h3>-->
+<!--<h3>{{birthday | etc}}</h3>-->
+<input type="text" [value]="text | uppercase">
+<br>
+<p>В чем разница: JSON vs JavaScript Object? (IT-витаминка)</p>
+<button (click)="showPerson()">person info in console</button>

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { UserTableComponent } from './user-table/user-table.component';
+import { UserListComponent } from './user-list/user-list.component';
+import {UsersService} from './users.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  // providers: [UsersService]
 })
-export class AppComponent {
-  title = 'ng-basics';
-}
+export class AppComponent {}

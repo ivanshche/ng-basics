@@ -1,0 +1,20 @@
+<!--<p>user-table works!</p>-->
+<i>table users:</i>
+<table>
+  <tr>
+    <th>First name:</th>
+    <th>Last name:</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.lastName | uppercase}}</td>
+    <td>{{user.firstName }}</td>
+  </tr>
+</table>
+<br>
+<h3>Created on {{userService.creationDate | date:'dd.MM.yyyy HH:mm:ss.SSS'}}</h3>
+
+<!--<h3>Created on {{userService.creationDate}}</h3>-->
+<h2>clicked {{userService.clickCount}} times</h2>
+<button (click)="userService.increase()">
+  click
+</button>

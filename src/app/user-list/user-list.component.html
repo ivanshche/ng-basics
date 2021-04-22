@@ -1,0 +1,14 @@
+<!--<p>user-list works!</p>-->
+<i>List of users:</i>
+<ul>
+  <li *ngFor="let user of users">
+    {{user.firstName}} {{user.lastName}}
+  </li>
+</ul>
+<br>
+<h3>Created on {{userService.creationDate | date:'dd.MM.yyyy HH:mm:ss.SSS'}}</h3>
+
+<h2>clicked {{userService.clickCount}} times</h2>
+<button (click)="userService.increase()">
+  click
+</button>
