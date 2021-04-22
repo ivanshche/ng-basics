@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from '../users.service';
+import {User} from '../models/user';
 
 
 // const itemsPerPage = 3;
@@ -13,7 +14,7 @@ import {UsersService} from '../users.service';
 })
 export class UserTableComponent implements OnInit {
 
-  public users: Array<any> | undefined;
+  public users!: Array<User>;
 
   /*Angular 6. Урок 3.1. NgPagination - разметка
   для переключения по страницам таблицы
