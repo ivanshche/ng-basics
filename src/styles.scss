@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import "app/app.component";
 
 * {
   //padding: 0;
@@ -21,4 +20,8 @@ body {
   margin: 0;
 }
 
+@import "app/app.component";
 
+
+/* Importing Bootstrap SCSS file. */
+//@import '~bootstrap/scss/bootstrap';

@@ -11,12 +11,18 @@ export class InMemoryDataService implements InMemoryDbService{
   // tslint:disable-next-line:typedef
   createDb() {
     const users = [
-      {firstName: 'ayvan', lastName: 'sidorov'},
-      {firstName: 'Tar', lastName: 'Fidj'},
-      {firstName: 'Jeck', lastName: 'Potroshitel'},
-      {firstName: 'ayvan', lastName: 'sidorov'},
-      {firstName: 'Romeo', lastName: 'Fwyeri'},
-      {firstName: 'Vasya ', lastName: 'Hmuriy'},
+      {id: 1, firstName: 'ayvan', lastName: 'sidorov'},
+      {id: 2, firstName: 'Tar', lastName: 'Fidj'},
+      {id: 3, firstName: 'Jeck', lastName: 'Potroshitel'},
+      {id: 4, firstName: 'ayvan', lastName: 'sidorov'},
+      {id: 5, firstName: 'Romeo', lastName: 'Fwyeri'},
+      {id: 6, firstName: 'Vasya ', lastName: 'Hmuriy'},
+      {id: 7, firstName: 'ayvan', lastName: 'sidorov'},
+      {id: 8, firstName: 'Tar', lastName: 'Fidj'},
+      {id: 9, firstName: 'Jeck', lastName: 'Potroshitel'},
+      {id: 10, firstName: 'ayvan', lastName: 'sidorov'},
+      // {id: 11, firstName: 'Romeo', lastName: 'Fwyeri'},
+      // {id: 12, firstName: 'Vasya ', lastName: 'Hmuriy'},
     ];
     return {users};
   }

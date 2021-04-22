@@ -12,6 +12,7 @@ import {UsersService} from './users.service';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './api/in-memory-data.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {InMemoryDataService} from './api/in-memory-data.service';
     /*delete if need send http on server*/
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false }
-    )
+    ),
+    NgbModule,
   ],
   providers: [UsersService],
   bootstrap: [

@@ -1,20 +1,44 @@
 <!--<p>user-table works!</p>-->
-<i>table users:</i>
-<table>
+<h3>Table users:</h3>
+<div class="table-responsive">
+<table class="table table-dark table-striped">
   <tr>
+    <th> id: </th>
+    <th> Last name:</th>
     <th>First name:</th>
-    <th>Last name:</th>
   </tr>
-  <tr *ngFor="let user of users">
+<!--  <tr *ngFor="let user of users | slice: (page-1) * pageSize : page * pageSize">-->
+  <tr *ngFor="let user of users ">
+    <td>{{user.id }}</td>
     <td>{{user.lastName | uppercase}}</td>
     <td>{{user.firstName }}</td>
   </tr>
 </table>
-<br>
-<h3>Created on {{userService.creationDate | date:'dd.MM.yyyy HH:mm:ss.SSS'}}</h3>
+</div>
+<p>Restricted size with rotation:</p>
+<ngb-pagination class="d-flex justify-content-center"
+                [collectionSize]="collectionSize"
+                [(page)]="page"
+                (pageChange)="onPageChange()"
+                [pageSize]="itemsPerPage"
+                [boundaryLinks]="true"></ngb-pagination>
+<pre>collectionSize: {{collectionSize}}</pre>
+<pre>page: {{page}}</pre>
+<pre>onPageChange: {{onPageChange}}</pre>
+<pre>itemsPerPage: {{itemsPerPage}}</pre>
 
-<!--<h3>Created on {{userService.creationDate}}</h3>-->
-<h2>clicked {{userService.clickCount}} times</h2>
-<button (click)="userService.increase()">
-  click
-</button>
+<!--<p>With boundary links:</p>-->
+<!--<ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>-->
+
+
+<!--<br>-->
+<!--<h3>Created on-->
+<!--  {{userService.creationDate | date:'dd.MM.yyyy HH:mm:ss.SSS'}}-->
+<!--</h3>-->
+
+<!--&lt;!&ndash;<h3>Created on {{userService.creationDate}}</h3>&ndash;&gt;-->
+<!--<h2>clicked {{userService.clickCount}} times</h2>-->
+<!--<button class="btn btn-primary"-->
+<!--        (click)="userService.increase()">-->
+<!--  click-->
+<!--</button>-->
